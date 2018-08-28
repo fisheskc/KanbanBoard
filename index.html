@@ -8,6 +8,9 @@
     <title>Kanban Board | Home</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
 </head>
 
 <body>
@@ -16,26 +19,37 @@
         <div class="column" id="toDoColumn">
             <div class="topColumn">
                 <h1>To-Do</h1>
+                <div class="inputWrapper">
+                    <input type="text" class="input" id="toDoInput" required>
+                    <i class="fas fa-plus" id="addToDoCard"></i>
+                </div>
+                <br>
             </div>
+            <br>
+            
         </div>
 
         <div class="column" id="doingColumn">
             <div class="topColumn">
                 <h1>Doing</h1>
+                <div class="inputWrapper">
+                    <input type="text" class="input" id="doingInput" required>
+                    <i class="fas fa-plus" id="addDoingCard"></i>
+                </div>
+                <br>
             </div>
         </div>
 
         <div class="column" id="doneColumn">
             <div class="topColumn">
                 <h1>Done</h1>
+                <div class="inputWrapper">
+                    <input type="text" class="input" id="doneInput" required>
+                    <i class="fas fa-plus" id="addDoneCard"></i>
+                </div>
+                <br>
             </div>
         </div>
-    </div>
-
-    <div id="card">
-        <h2 id="task head">Task Here</h1>
-        <p id="description1">Begin the description here</p>
-        <p id="description2">Second Para goes here</p>
     </div>
 
 </body>

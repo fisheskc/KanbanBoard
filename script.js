@@ -1,9 +1,10 @@
-let tasks = ['Task 1', 'Task 2', 'Task 3']
+let taskList = ['Task 1', 'Task 2']
 
-let removeFunction = () => {
-    console.log(tasks)
+let addCard = () => {
+    let userInput = document.getElementById('toDoInput').value
+    console.log(userInput)
 }
 
-document.getElementById('card').addEventListener('click', myFunction({
-    removeFunction()
-}));
+document.getElementById('addToDoCard').addEventListener('click', function(){
+    addCard()
+})
