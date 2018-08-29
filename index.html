@@ -15,39 +15,35 @@
 
 <body>
 
+    <div class="inputWrapper">
+        <input type="text" class="input" id="input" placeholder="Type Your Task Here" required>
+        <i class="fas fa-plus" id="addCard"></i>
+    </div>
+
+    <br>
+    <br>
+
     <div class="container">
+
         <div class="column" id="toDoColumn">
             <div class="topColumn">
                 <h1>To-Do</h1>
-                <div class="inputWrapper">
-                    <input type="text" class="input" id="toDoInput" required>
-                    <i class="fas fa-plus" id="addToDoCard"></i>
-                </div>
-                <br>
             </div>
+            <ul id="list">
+                </ul>
             <br>
-            
+
         </div>
 
         <div class="column" id="doingColumn">
             <div class="topColumn">
                 <h1>Doing</h1>
-                <div class="inputWrapper">
-                    <input type="text" class="input" id="doingInput" required>
-                    <i class="fas fa-plus" id="addDoingCard"></i>
-                </div>
-                <br>
             </div>
         </div>
 
         <div class="column" id="doneColumn">
             <div class="topColumn">
                 <h1>Done</h1>
-                <div class="inputWrapper">
-                    <input type="text" class="input" id="doneInput" required>
-                    <i class="fas fa-plus" id="addDoneCard"></i>
-                </div>
-                <br>
             </div>
         </div>
     </div>
