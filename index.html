@@ -8,14 +8,31 @@
     <title>Kanban Board | Home</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
 </head>
 
 <body>
+
+    <div class="inputWrapper">
+        <input type="text" class="input" id="input" placeholder="Type Your Task Here" required>
+        <i class="fas fa-plus" id="addCard"></i>
+    </div>
+
+    <br>
+    <br>
+
     <div class="container">
+
         <div class="column" id="toDoColumn">
             <div class="topColumn">
                 <h1>To-Do</h1>
             </div>
+            <ul id="list">
+            </ul>
+            <br>
+
         </div>
 
         <div class="column" id="doingColumn">
@@ -31,10 +48,7 @@
         </div>
     </div>
 
-
-
-
-    <script src="script.js"></script>
 </body>
+<script src="script.js"></script>
 
 </html>
