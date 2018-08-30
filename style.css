@@ -50,3 +50,9 @@ input:focus, textarea:focus {
 .input {
     border: 1px solid black;
 }
+
+ul,
+li {
+    list-style: none;
+}
+

@@ -1,47 +1,50 @@
-const addButton = document.getElementById('addCard')
-const input = document.getElementById('input')
-const list = document.getElementById('list')
+const input = document.getElementById('input');
+const list = document.getElementById('list');
+const submit = document.getElementById('addCard');
 
-let newTask;
+let task;
 let remove;
+let edit;
 
-let taskList = []
-
-let addFunction = (i) => {
-    let userInput = input.value
-
-    remove = document.createElement('button')
-    newTask = document.createElement('li')
-
-    remove.innerHTML = "🗑️"
-
-    newTask.textContent = userInput
-
-    newTask.appendChild(remove)
-    list.appendChild(newTask)
-
-    taskList.push(newTask)
-
-    for (i = 0; i < taskList.length; i++) {
-        let taskValue = taskList[i].innerHTML;
-        taskList[i].id = i;
-        console.log(taskList)
-
-        trash = taskList[i].children[0]
-        trash.id = i
-    }
+const createTask = () => {
+    task = document.createElement('li');
+    task.textContent = input.value;
 }
 
-let removeFunction = () => {
-    console.log("It works!")
+const removeTask = () => {
+    list.removeChild(event.target.parentNode);
 }
 
-addButton.addEventListener("click", function () {
-    addFunction();
-})
+const removeButton = () => {
+    remove = document.createElement('button');
+    remove.innerHTML = "🗑️";
 
-document.addEventListener('click', function (e, i) {
-    if (e.target.id == `${i}`) {
-        removeFunction()
-    }
-})
+    remove.style.marginLeft = "20px"
+    remove.style.marginBottom = "10px"
+    remove.style.border = "none"
+    remove.style.outline = "none"
+
+    remove.addEventListener("click", () => {
+        removeTask()
+    });
+}
+
+const editButton = () => {
+    edit = document.createElement('button')
+    edit.innerHTML = '✎'
+
+    edit.style.marginLeft = "20px"
+    edit.style.border = "none"
+    edit.style.outline = "none"
+}
+
+const addTask = () => {
+    removeButton();
+    createTask();
+    editButton()
+    task.appendChild(remove);
+    remove.appendChild(edit)
+    list.appendChild(task);
+}
+
+submit.addEventListener("click", addTask);
