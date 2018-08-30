@@ -9,8 +9,7 @@ p {
     font-family: 'Indie Flower', cursive;
 }
 
-input:focus,
-textarea:focus {
+input:focus, textarea:focus {
     outline: none;
 }
 
@@ -25,9 +24,10 @@ textarea:focus {
     border: 1px solid black;
 }
 
-.topColumn {
-    border-bottom: 1px solid black;
+.topColumn{
+    border-bottom: 1px solid black; 
     text-align: center;
+
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -54,3 +54,4 @@ ul,
 li {
     list-style: none;
 }
+
